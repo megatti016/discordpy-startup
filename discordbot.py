@@ -19,9 +19,7 @@ async def ping(ctx):
 
 @bot.event
 async def on_member_join(member):
-#招待通知
    CHANNEL_ID = 699621884643377194
-    #710726901051818068
     channel = bot.get_channel(CHANNEL_ID)
     infomation_ch = bot.get_channel(699621884643377194)
     zikosyoukai_ch = bot.get_channel(699621884643377194)
