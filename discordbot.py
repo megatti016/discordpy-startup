@@ -18,9 +18,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 async def on_member_join(member):
-CHANNEL_ID = '699621884643377194'
-    channel = bot.get_channel(CHANNEL_ID)
-    infomation_ch = bot.get_channel('699621884643377194')
-    zikosyoukai_ch = bot.get_channel('699621884643377194')
+CHANNEL_ID = 699621884643377194
+
     
 bot.run(token)
