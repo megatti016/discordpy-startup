@@ -4,19 +4,20 @@ import discord
 import traceback
 
 bot = commands.Bot(command_prefix='/')
+client = discord.Client()
 token = os.environ['DISCORD_BOT_TOKEN']
 
-@bot.command()
+@client.command()
 async def ping(ctx):
     await ctx.send('pong')
 
-@bot.event
+@client.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
-@bot.event
+@client.event
 async def on_member_join(member):
    CHANNEL_ID = 699621884643377194
     channel = bot.get_channel(CHANNEL_ID)
